@@ -48,19 +48,22 @@ double getAverage(pair<int, double> Recruits_TotalHeight)
     return Average;
 }
 
+void DisplaySummary()
+{
+    cout << "The max height is: " << maxH << " and min height is: " << minH << endl;
+    cout << "Also their total is: " << TotalHeight << " with an average of: " << Average << endl;
+    cout << "No of recruits: " << Recruits << endl;
+}
 void ProcessCandidate()
 {
     while (true)
     {
         getAverage(setMaxAndMinH(getH()));
-        cout << "The max height is: " << maxH << " and min height is: " << minH << endl;
-        cout << "Also their total is: " << TotalHeight << " with an average of: " << Average << endl;
-        cout << "No of recruits: " << Recruits << endl;
+        DisplaySummary();
     }
 }
 
 int main()
 {
-
     ProcessCandidate();
 }
